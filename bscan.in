@@ -1,0 +1,25 @@
+#title: B-scan from an air-filled cavity (rectangular void) buried in a dielectric half-space
+#domain: 0.71 1.1 0.05
+#dx_dy_dz: 0.002 0.002 0.002
+#time_window: 1.8e-8  
+#pml_cells: 10
+
+#material: 8.0 1e-5 1 0 concrete
+#material: 1.0 0 1.0 0.0 air
+#material: 81 1e-5 1 0 water
+
+#waveform: ricker 1 5e8 my_ricker
+#hertzian_dipole: z 0.1 0.75 0 my_ricker
+#rx: 0.2 0.75 0
+#src_steps: 0.01 0 0
+#rx_steps: 0.01 0 0
+
+#box: 0 0 0 0.71 0.75 0.02 concrete 
+#box: 0 0.75 0 0.71 1 0.02 air 
+
+##---- where to define your model---- 
+#sphere: 0.38 0.3 0 0.03 water 
+#sphere: 0.45 0.6 0 0.01 air
+
+
+##geometry_view: 0 0 0 0.71 1 0.02 0.002 0.002 0.002 bscan n
